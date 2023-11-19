@@ -1,0 +1,7 @@
+{
+  "name": "prescription-helper",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

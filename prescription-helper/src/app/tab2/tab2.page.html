@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Add prescription
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="prescriptionForm" (ngSubmit)="onSubmit()">
+    <div class="prescription-form">
+      <label for="title">Title</label>
+      <ion-input type="text" formControlName="title"></ion-input>
+      <label for="dateOfPrescription">Date</label>
+      <ion-input type="date" formControlName="dateOfPrescription"></ion-input>
+      <label for="numberWillUse">Number will use</label>
+      <ion-input type="number" min="1" max="12" formControlName="numberWillUse"></ion-input>
+      <label for="numberOfUsed">Number of used</label>
+      <ion-input type="number" min="0" max="12" formControlName="numberOfUsed"></ion-input>
+      <label for="comments">Comments</label>
+      <ion-input type="text" formControlName="comments"></ion-input>
+      
+      <ng-container *ngIf="!edit_view">
+        <label for="imageUpload" class="custom-file-input-label">Upload Image</label>
+        <ion-input type="file" class="file-input" accept="image/*" id="imageUpload" formControlName="image" (change)="onImageUpload($event)"></ion-input>
+      </ng-container>
+      <ng-container *ngIf="edit_view">
+        <label for="imageUpload" class="custom-file-input-label">
+          Image
+          <input type="file" id="imageUpload" (change)="onImageUpload($event)" accept="image/*" style="display: none">
+          <button name="pencil" class="edit-icon"></button>
+        </label>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img [src]="imageURL" style="width: 20%; height: 20%;"/>
+        </div>
+        
+      </ng-container>
+      
+    </div>
+    <button expand="full" type="submit" > {{ edit_view ? 'Modify' : 'Add' }}</button>
+  </form>
+   
+</ion-content>

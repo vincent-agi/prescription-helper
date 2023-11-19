@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ma cave
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+      <div *ngIf="prescriptions.length <= 0">
+        <!-- No have prescription registed -->
+        <p class="no-prescription">You havn't prescriptions saved</p>
+      </div>
+      <div *ngIf="prescriptions.length > 0">
+        <div size="12" *ngFor="let prescription of prescriptions; index as position">
+          <div class="beer-card">
+            <div class="dropdown">
+              <button>Actions</button>
+              <div class="dropdown-content">
+                <a (click)="update(prescription.id)" style="cursor: pointer;">Edit</a>
+                <a (click)="deletePrescription(prescription.id)" style="cursor: pointer;">Delete</a>
+              </div>
+            </div>
+            <div class="container-beer-img">
+              <img class="beer-img" [src]="prescription.image"/>
+              <span class="beer-name">{{prescription.title}}</span>
+              <span class="beer-mark">{{prescription.dateOfPrescription | date}}</span>
+            </div>
+          </div>
+        </div></div>
+
+</ion-content>
