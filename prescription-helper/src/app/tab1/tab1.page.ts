@@ -11,7 +11,8 @@ import Prescription from '../models/prescription';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent, CommonModule],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent,
+    ExploreContainerComponent, CommonModule],
 })
 export class Tab1Page implements OnInit {
 
