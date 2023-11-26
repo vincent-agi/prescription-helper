@@ -31,13 +31,13 @@ export class Tab1Page implements OnInit {
   }
   
   deletePrescription(id:string){
-    if(confirm('Are you sure you want delete this beer')){
+    if(confirm('Are you sure you want delete this prescription')){
       this.prescriptions = this.prescriptions.filter((x:any)=>x.id != id);
       this.prescriptionService.updatePrescriptions(this.prescriptions);
     }
     
   }
   update(id:string){
-    this.router.navigate(['add-presctiption/'+id])
+    this.router.navigateByUrl('tabs/tab2/'+id);
   }
 }

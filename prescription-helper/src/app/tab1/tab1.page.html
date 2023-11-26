@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Ma cave
+      Prescription List
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,7 +13,7 @@
       </div>
       <div *ngIf="prescriptions.length > 0">
         <div size="12" *ngFor="let prescription of prescriptions; index as position">
-          <div class="beer-card">
+          <div class="prescription-card">
             <div class="dropdown">
               <button>Actions</button>
               <div class="dropdown-content">
@@ -21,10 +21,10 @@
                 <a (click)="deletePrescription(prescription.id)" style="cursor: pointer;">Delete</a>
               </div>
             </div>
-            <div class="container-beer-img">
-              <img class="beer-img" [src]="prescription.image"/>
-              <span class="beer-name">{{prescription.title}}</span>
-              <span class="beer-mark">{{prescription.dateOfPrescription | date}}</span>
+            <div class="container-prescription-img">
+              <img class="prescription-img" [src]="prescription.image"/>
+              <span class="prescription-name">{{prescription.title}}</span>
+              <span class="prescription-date">{{prescription.dateOfPrescription | date}}</span>
             </div>
           </div>
         </div></div>
