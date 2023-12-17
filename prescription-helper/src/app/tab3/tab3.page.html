@@ -1,17 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      About
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>About this app & my motivations</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">This app was created to helper people with many medical prescriptions manage they 
+        (renew, date of out, drugs planning at drog store).
+      With simple medaical prescription data and one picture of it you can use this app.
+    Prescription Helper it's fully free and open souce. That's means you can use it's for free, helpe= me to impove app, share and modify.
+      I make prescription helper because i meet a lt of poeple who lose precriptions.</div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>About your stored data</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">As this app,is free and open souce you can simply check my sentences.
+        all you datas (precriptions, personal datas ...) are stored on you mobile device. Nothing request are do on internet. All rest on you device.
+        I don't catch your data, i don't access on it oe your device.
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>About me</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Hi, I'm Vincent AGI, French developper in France. Tech-enthousiat, open-source agree.
+        If you want you can check code and help impove app <a href="https://github.com/vincent-agi/prescription-helper" target="_blank">here</a>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
 </ion-content>

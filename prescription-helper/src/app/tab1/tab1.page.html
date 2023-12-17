@@ -24,7 +24,10 @@
             <div class="container-prescription-img">
               <img class="prescription-img" [src]="prescription.image"/>
               <span class="prescription-name">{{prescription.title}}</span>
-              <span class="prescription-date">{{prescription.dateOfPrescription | date}}</span>
+              <span class="prescription-date">{{prescription.dateOfPrescription | date}} 
+                Used: {{prescription.numberOfUsed}} 
+                Rest: {{prescription.numberWillUse - prescription.numberOfUsed}}
+              </span>
             </div>
           </div>
         </div></div>

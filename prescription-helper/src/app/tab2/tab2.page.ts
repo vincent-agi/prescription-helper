@@ -85,10 +85,11 @@ export class Tab2Page implements OnInit {
       }
       else {
         this.prescriptionService.createPrescription(this.prescription);
+        delete this.prescription;
       }
         this.router.navigate(['/'])
     } else {
-      console.log('No file selected.');
+      alert('No file selected.');
     }
     delete this.prescription;
   }
