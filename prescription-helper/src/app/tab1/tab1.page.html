@@ -22,7 +22,7 @@
               </div>
             </div>
             <div class="container-prescription-img" [class]="prescription.numberWillUse - prescription.numberOfUsed <= 0 ? 'color-black' : 'color-white'">
-              <img class="prescription-img" [src]="prescription.image"/>
+              <img class="prescription-img" [src]="prescription.image" style="width: 50%; height: auto;" />
               <span class="prescription-name">{{prescription.title}} <span *ngIf="prescription.numberWillUse - prescription.numberOfUsed <= 0">(OUT)</span> </span>
               <span class="prescription-date">{{prescription.dateOfPrescription | date}} 
                 Used: {{prescription.numberOfUsed}} 
