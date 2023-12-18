@@ -44,6 +44,7 @@ export class Tab2Page implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    delete this.prescription;
     this.getData()
   }
   ionViewDidEnter(): void {
@@ -85,13 +86,11 @@ export class Tab2Page implements OnInit {
       }
       else {
         this.prescriptionService.createPrescription(this.prescription);
-        delete this.prescription;
       }
         this.router.navigate(['/'])
     } else {
       alert('No file selected.');
     }
-    delete this.prescription;
   }
   onImageUpload(event: Event) {
     const inputElement = event.target as HTMLInputElement;
