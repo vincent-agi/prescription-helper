@@ -44,7 +44,6 @@ export class Tab2Page implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    delete this.prescription;
     this.getData()
   }
   ionViewDidEnter(): void {
@@ -105,5 +104,10 @@ export class Tab2Page implements OnInit {
       };
       reader.readAsDataURL(newImage);
     }
+  }
+
+  public clear() {
+    delete this.prescription;
+    window.location.reload();
   }
 }
