@@ -88,9 +88,8 @@ export class Tab2Page implements OnInit {
       }
         this.router.navigate(['/'])
     } else {
-      console.log('No file selected.');
+      alert('No file selected.');
     }
-    delete this.prescription;
   }
   onImageUpload(event: Event) {
     const inputElement = event.target as HTMLInputElement;
@@ -105,5 +104,10 @@ export class Tab2Page implements OnInit {
       };
       reader.readAsDataURL(newImage);
     }
+  }
+
+  public clear() {
+    delete this.prescription;
+    window.location.reload();
   }
 }

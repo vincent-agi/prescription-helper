@@ -19,20 +19,28 @@
 .container-prescription-img {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 10px;
+}
+
+.color-black {
+    color: black;
+}
+
+.color-white {
+    color: white;
 }
 
 .prescription-name {
     margin-top: 10px;
     font-size: 18px;
     font-weight: bold;
-    color: black;
 }
 
 .prescription-date, .prescription-comments {
     font-weight: bold;
-    color: black;
     font-size: 14;
 }
 .dropdown {

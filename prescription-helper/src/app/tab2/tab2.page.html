@@ -7,6 +7,7 @@
 </ion-header>
 <ion-content>
     <div class="prescription-form">
+      <ion-button expand="full" (click)="clear()">Clear form</ion-button>
       <label for="title">Title</label>
       <ion-input type="text" [(ngModel)]="prescriptionTitle"></ion-input>
       <label for="dateOfPrescription">Date</label>
